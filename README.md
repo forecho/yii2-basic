@@ -1,3 +1,5 @@
+# Yii2 Basic Project Template
+
 ## 安装
 
 ```
@@ -9,8 +11,6 @@ cp .env.example .env
 ```
 composer install
 php yii migrate
-php yii migrate --migrationPath=@yiier/actionStore/migrations/
-php yii migrate --migrationPath=@yiier/targetSetting/migrations/
 chmod 777 -R runtime/
 chmod 777 -R web/assets/
 chmod 777 -R web/upload/

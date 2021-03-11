@@ -58,7 +58,7 @@ class User extends ActiveRecord implements \yii\web\IdentityInterface
             ['status', 'in', 'range' => [CommonStatus::STATUS_ACTIVE, CommonStatus::STATUS_UNACTIVATED]],
             ['role', 'default', 'value' => 10],
             [['username'], 'string', 'max' => 50],
-            ['role', 'in', 'range' => [self::ROLE_USER, self::ROLE_ADMIN, self::ROLE_SUPER_ADMIN, self::FAKE_USER]],
+            ['role', 'in', 'range' => [self::ROLE_USER, self::ROLE_ADMIN, self::ROLE_SUPER_ADMIN]],
         ];
     }
 

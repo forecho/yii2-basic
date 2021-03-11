@@ -73,12 +73,10 @@ class SignupForm extends Model
 
         $user = new User();
         $user->username = ($this->username) ? $this->username : Security::random();
-        $user->nickname = $user->username;
         $user->email = $this->email;
         $user->status = CommonStatus::STATUS_ACTIVE; // 激活
         $user->role = User::ROLE_USER;
-        $filename = rand(1, 130);
-        $user->avatar = "/images/avatar/{$filename}.png";
+        $user->avatar = "";
         $user->setPassword($this->password);
         $user->generateAuthKey();
 
